@@ -27,10 +27,11 @@ contract Proxy{
         }
          
     }
-
+    //함수를 실행하면서 이더를 보낼떄
     fallback() external payable {
         _delegate(implementation);
     }
+    //순수하게 이더만 받을떄
     receive() external payable {
         // custom function code
     }
